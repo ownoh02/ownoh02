@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarcontact"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/drakblue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ข้อมูลรถยนต์"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                style="@style/NormalEditText"
+                android:drawableStart="@drawable/ic_baseline_directions_car_filled_24"
+                android:layout_weight="1"
+                android:hint="เลขทะเบียน"/>
+
+            <Button
+                android:backgroundTint="@color/drakblue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OCR"
+                android:textSize="20dp"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ข้อมูลผู้ติดต่อ"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <Button
+                android:backgroundTint="@color/drakblue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ถ่ายภาพ"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:backgroundTint="@color/drakblue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OCR"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            style="@style/NormalEditText"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:hint="ชื่อ - สกุล"/>
+
+        <EditText
+            style="@style/NormalEditText"
+            android:drawableStart="@drawable/ic_baseline_credit_card_24"
+            android:hint="เลขบัตรประจำตัวประชาชน"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                style="@style/NormalEditText"
+                android:drawableStart="@drawable/ic_baseline_call_24"
+                android:layout_weight="1"
+                android:hint="เบอร์โทรศัพท์"/>
+
+            <EditText
+                android:drawableStart="@drawable/ic_baseline_device_thermostat_24"
+                style="@style/smallEditText"
+                android:layout_weight="2"
+                android:hint="°C"/>
+
+        </LinearLayout>
+
+        <EditText
+            style="@style/NormalEditText"
+            android:drawableStart="@drawable/ic_baseline_home_24"
+            android:hint="มาติดต่อที่บ้าน"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/drakblue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="พิมพ์"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:backgroundTint="@color/green"
+                android:id="@+id/btn_index_confrim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ยืนยัน"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

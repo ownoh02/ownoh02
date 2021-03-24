@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".HomeActivity"
+    tools:openDrawer="end"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/drakblue"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:elevation="4dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_contact"
+                        card_view:cardBackgroundColor="@color/drakblue"
+                        android:layout_width="150dp"
+                        android:layout_height="170dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="20dp">
+                        <ImageView
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_person_add_100"/>
+                        <TextView
+                            android:textSize="25dp"
+                            android:padding="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="bottom"
+                            android:text="ผู้มาติดต่อ"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_staff"
+                        card_view:cardBackgroundColor="@color/drakblue"
+                        android:layout_width="150dp"
+                        android:layout_height="170dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="20dp">
+                        <ImageView
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_family_restroom_100"/>
+                        <TextView
+                            android:textSize="25dp"
+                            android:padding="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="bottom"
+                            android:text="เจ้าหน้าที่"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center">
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_alarm"
+                        card_view:cardBackgroundColor="@color/drakblue"
+                        android:layout_width="150dp"
+                        android:layout_height="170dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="20dp">
+                        <ImageView
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_alarm_on_100"/>
+                        <TextView
+                            android:textSize="25dp"
+                            android:padding="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="bottom"
+                            android:text="แจ้งเตือน"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_report"
+                        card_view:cardBackgroundColor="@color/drakblue"
+                        android:layout_width="150dp"
+                        android:layout_height="170dp"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="20dp">
+                        <ImageView
+                            android:paddingTop="15dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_book_100"/>
+                        <TextView
+                            android:textSize="25dp"
+                            android:padding="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="bottom"
+                            android:text="รายงาน"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        >
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
